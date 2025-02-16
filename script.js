@@ -1,5 +1,5 @@
 const [listDialog, endDialog] = document.querySelectorAll('dialog');
-const boxes = listDialog.querySelectorAll('[type="checkbox"]');
+const boxes = [...listDialog.querySelectorAll('[type="checkbox"]')];
 const button = listDialog.querySelector('button');
 
 listDialog.onchange = updateButton;
@@ -10,7 +10,7 @@ listDialog.showModal();
 updateButton();
 
 function updateButton() {
-  button.disabled = !Array.from(boxes).every(box => box.checked);
+  button.disabled = boxes.some(box => !box.checked);
 }
 
 function end() {
