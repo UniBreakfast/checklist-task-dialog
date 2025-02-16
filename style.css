@@ -1,0 +1,14 @@
+form {
+  div {
+    padding-block: 6px;
+
+    &:last-child {
+      margin-top: 12px;
+      text-align: center;
+    }
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
